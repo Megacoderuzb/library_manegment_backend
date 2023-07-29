@@ -1,0 +1,32 @@
+### REGISTER Admin
+POST http://localhost:7070/publishers
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjM2Y3YzBiZGE4ZDEwZGRmMTQxNTcyIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYwMzE4OX0.qu94SacPDrmVqBCQ-g4NWo6YsFgyGx4UH4G43BkYL20
+Content-Type: application/json
+
+{
+  "name": "najot",
+  "address": "toshkent",
+  "phone": "979"
+}
+
+
+
+### GET all
+GET http://localhost:7070/publishers
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjM2Y3YzBiZGE4ZDEwZGRmMTQxNTcyIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYwMzE4OX0.qu94SacPDrmVqBCQ-g4NWo6YsFgyGx4UH4G43BkYL20
+### GET ME
+GET http://localhost:7070/publishers/64c55823f5f2dd4582ef3cb8
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjM2Y3YzBiZGE4ZDEwZGRmMTQxNTcyIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYwMzE4OX0.qu94SacPDrmVqBCQ-g4NWo6YsFgyGx4UH4G43BkYL20
+
+### PATCH ME
+PATCH http://localhost:7070/publishers/64c55823f5f2dd4582ef3cb8
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjM2Y3YzBiZGE4ZDEwZGRmMTQxNTcyIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYwMzE4OX0.qu94SacPDrmVqBCQ-g4NWo6YsFgyGx4UH4G43BkYL20
+Content-Type: application/json
+
+{
+  "name": "novda"
+}
+
+### DELETE ME
+DELETE http://localhost:7070/publishers/64c55823f5f2dd4582ef3cb8
+Authorization:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjM2Y3YzBiZGE4ZDEwZGRmMTQxNTcyIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYwMzE4OX0.qu94SacPDrmVqBCQ-g4NWo6YsFgyGx4UH4G43BkYL20

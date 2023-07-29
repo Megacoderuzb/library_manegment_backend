@@ -1,0 +1,30 @@
+### REGISTER Admin
+POST http://localhost:7070/authors
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjM2Y3YzBiZGE4ZDEwZGRmMTQxNTcyIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYwMzE4OX0.qu94SacPDrmVqBCQ-g4NWo6YsFgyGx4UH4G43BkYL20
+Content-Type: application/json
+
+{
+  "name": "John Doe"
+}
+
+
+
+### GET all
+GET http://localhost:7070/authors
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjM2Y3YzBiZGE4ZDEwZGRmMTQxNTcyIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYwMzE4OX0.qu94SacPDrmVqBCQ-g4NWo6YsFgyGx4UH4G43BkYL20
+### GET ME
+GET http://localhost:7070/authors/64c54d0afe037090c4fe5183
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjM2Y3YzBiZGE4ZDEwZGRmMTQxNTcyIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYwMzE4OX0.qu94SacPDrmVqBCQ-g4NWo6YsFgyGx4UH4G43BkYL20
+
+### PATCH ME
+PATCH http://localhost:7070/authors/64c54d0afe037090c4fe5183
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjM2Y3YzBiZGE4ZDEwZGRmMTQxNTcyIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYwMzE4OX0.qu94SacPDrmVqBCQ-g4NWo6YsFgyGx4UH4G43BkYL20
+Content-Type: application/json
+
+{
+  "name": "Eshmat"
+}
+
+### DELETE ME
+DELETE http://localhost:7070/authors/64c54d0afe037090c4fe5183
+Authorization:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjM2Y3YzBiZGE4ZDEwZGRmMTQxNTcyIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYwMzE4OX0.qu94SacPDrmVqBCQ-g4NWo6YsFgyGx4UH4G43BkYL20
