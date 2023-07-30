@@ -9,7 +9,8 @@ Content-Type: application/json
     "due_date": 1690807984834
 }
 ###get all loans
-GET http://localhost:7070/loans
+#pagination ishlaydi faqat q dan boshqalari 
+GET http://localhost:7070/loans?filter={"book": "64c5d3c64019d012341d8c36"}&sort={"due_date": 1}&limit=6&offset=0
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNWM1NWUyOTc5ODAwNzBmNWY1MDc4Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDY4NTcwOCwiZXhwIjoxNjkwNzcyMTA4fQ.FOx6CouEiipKXqNBJ54orE-1Kw5hcsmlVdeMexmoWto
 ### delete loan
 GET http://localhost:7070/loans/64c5c5a0297980070f5f507f

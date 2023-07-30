@@ -20,11 +20,10 @@ Content-Type: application/json
 }
 
 ### GET all
-#q - ishlamaydi
-#pagination: filter={"full_name": ""}&sort={"full_name": 1}&limit=10&offset=0
+#pagination: q=full_name filter={"full_name": ""}&sort={"full_name": 1}&limit=10&offset=0
 #qolgan joylarda ham huddi shunday ishlaydi faqat maydon nomlari bowqaca bolishi kerak
 ###
-GET http://localhost:7070/admins?sort={"full_name": 1}&limit=10&offset=0
+GET http://localhost:7070/admins?sort={"username": 1}&limit=10&offset=0&q=a
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNTQ4ODE5ZWU2MTRlNzE5MmU3ZjIzIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDY1MTI0OH0.Juzt916wY77a1SY6-NUWnYtgFT24YMbVXc-QRd_zrjk
 ### GET Admin
 GET http://localhost:7070/admins/64c3eeb98e6b7e98dec7d4f6

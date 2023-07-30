@@ -2,16 +2,14 @@ const { NotFoundError } = require("../../shared/errors");
 const Loan = require("./Loan");
 
 const showLoan = async (query) => {
-  const { q, filter, sort, limit, offset } = query;
-  // { $regex: new RegExp(q, "i") };
+  const { filter, sort, limit, offset } = query;
 
-  const queryObj = q ? { $text: { $search: q } } : {};
   const filterObj = filter ? JSON.parse(filter) : {};
   const sortObj = sort ? JSON.parse(sort) : { _id: 1 };
   const limitNum = limit ? parseInt(limit) : 10;
   const offsetNum = offset ? parseInt(offset) : 0;
 
-  const matchingDocs = await Loan.find({ $and: [queryObj, filterObj] })
+  const matchingDocs = await Loan.find({ ...filterObj })
     .sort(sortObj)
     .skip(offsetNum)
     .limit(limitNum)
@@ -35,9 +33,7 @@ const showLoan = async (query) => {
       },
     ]);
 
-  const totalDocs = await Loan.countDocuments({
-    $and: [queryObj, filterObj],
-  });
+  const totalDocs = await Loan.countDocuments({ ...filterObj });
 
   if (!matchingDocs) {
     throw new NotFoundError("Foydalanuvchi topilmadi.");

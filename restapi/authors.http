@@ -4,13 +4,13 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNWM1
 Content-Type: application/json
 
 {
-  "name": "Aql"
+  "name": "Full Name"
 }
 
 
 
 ### GET all
-GET http://localhost:7070/authors?filter={"name": "Aql"}&sort={"name": -1}&limit=2&offset=1
+GET http://localhost:7070/authors?filter={"name": "Aql"}&sort={"name": -1}&limit=4&offset=0&q=a
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNWM1NWUyOTc5ODAwNzBmNWY1MDc4Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDY4NTcwOCwiZXhwIjoxNjkwNzcyMTA4fQ.FOx6CouEiipKXqNBJ54orE-1Kw5hcsmlVdeMexmoWto
 ### GET author
 GET http://localhost:7070/authors/64c5ce51e5c616d584990229

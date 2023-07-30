@@ -5,7 +5,7 @@ const showBorrower = async (query) => {
   const { q, filter, sort, limit, offset } = query;
   // { $regex: new RegExp(q, "i") };
 
-  const queryObj = q ? { $text: { $search: q } } : {};
+  const queryObj = q ? { full_name: { $regex: q, $options: "i" } } : {};
   const filterObj = filter ? JSON.parse(filter) : {};
   const sortObj = sort ? JSON.parse(sort) : { _id: 1 };
   const limitNum = limit ? parseInt(limit) : 10;

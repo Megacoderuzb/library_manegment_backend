@@ -12,7 +12,6 @@ const { postLoanSchema } = require("./_schema");
  */
 const postLoan = async (req, res, next) => {
   try {
-    console.log(req.body);
     httpValidator({ body: req.body }, postLoanSchema);
 
     const result = await addLoan(req.user.id, req.body);
