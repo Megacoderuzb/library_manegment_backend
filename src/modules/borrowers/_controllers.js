@@ -64,7 +64,7 @@ const getBorrower = async (req, res, next) => {
 };
 const getBorrowers = async (req, res, next) => {
   try {
-    const result = await listBorrowers();
+    const result = await listBorrowers(req.query);
     res.status(200).json({
       data: result,
     });

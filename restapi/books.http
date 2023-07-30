@@ -1,33 +1,33 @@
 ### REGISTER Admin
 POST http://localhost:7070/books
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjM2Y3YzBiZGE4ZDEwZGRmMTQxNTcyIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYwMzE4OX0.qu94SacPDrmVqBCQ-g4NWo6YsFgyGx4UH4G43BkYL20
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNWM1NWUyOTc5ODAwNzBmNWY1MDc4Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDY4NTcwOCwiZXhwIjoxNjkwNzcyMTA4fQ.FOx6CouEiipKXqNBJ54orE-1Kw5hcsmlVdeMexmoWto
 Content-Type: application/json
 
 {
-  "title": "bir balo",
-  "publisher": "64c4fbab7a9fa1b2c60890d4",
-  "author": "64c4bff84f599ef6976a7e2c",
-  "copies": 1
+  "title": "Web",
+  "publisher": "64c5cea9e5c616d584990234",
+  "author": "64c5ce51e5c616d584990229",
+  "copies": 10
 }
 
 
 
 ### GET all
-GET http://localhost:7070/books
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjM2Y3YzBiZGE4ZDEwZGRmMTQxNTcyIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYwMzE4OX0.qu94SacPDrmVqBCQ-g4NWo6YsFgyGx4UH4G43BkYL20
-### GET ME
-GET http://localhost:7070/books/64c4e906e11b5a5846cc7eb8
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjM2Y3YzBiZGE4ZDEwZGRmMTQxNTcyIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYwMzE4OX0.qu94SacPDrmVqBCQ-g4NWo6YsFgyGx4UH4G43BkYL20
+GET http://localhost:7070/books?filter={"title": "Web"}&sort={"copies": 1}&limit=6&offset=0
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNWM1NWUyOTc5ODAwNzBmNWY1MDc4Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDY4NTcwOCwiZXhwIjoxNjkwNzcyMTA4fQ.FOx6CouEiipKXqNBJ54orE-1Kw5hcsmlVdeMexmoWto
+### GET single
+GET http://localhost:7070/books/64c5d3c64019d012341d8c36
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNWM1NWUyOTc5ODAwNzBmNWY1MDc4Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDY4NTcwOCwiZXhwIjoxNjkwNzcyMTA4fQ.FOx6CouEiipKXqNBJ54orE-1Kw5hcsmlVdeMexmoWto
 
-### PATCH ME
-PATCH http://localhost:7070/books/64c4e906e11b5a5846cc7eb8
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjM2Y3YzBiZGE4ZDEwZGRmMTQxNTcyIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYwMzE4OX0.qu94SacPDrmVqBCQ-g4NWo6YsFgyGx4UH4G43BkYL20
+### PATCH single
+PATCH http://localhost:7070/books/64c5d3c64019d012341d8c36
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNWM1NWUyOTc5ODAwNzBmNWY1MDc4Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDY4NTcwOCwiZXhwIjoxNjkwNzcyMTA4fQ.FOx6CouEiipKXqNBJ54orE-1Kw5hcsmlVdeMexmoWto
 Content-Type: application/json
 
 {
-  "title": "test"
+  "title": "Js"
 }
 
 ### DELETE ME
-DELETE http://localhost:7070/books/64c4e906e11b5a5846cc7eb8
-Authorization:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjM2Y3YzBiZGE4ZDEwZGRmMTQxNTcyIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYwMzE4OX0.qu94SacPDrmVqBCQ-g4NWo6YsFgyGx4UH4G43BkYL20
+DELETE http://localhost:7070/books/64c5d3704019d012341d8c1c
+Authorization:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNWM1NWUyOTc5ODAwNzBmNWY1MDc4Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDY4NTcwOCwiZXhwIjoxNjkwNzcyMTA4fQ.FOx6CouEiipKXqNBJ54orE-1Kw5hcsmlVdeMexmoWto

@@ -53,7 +53,7 @@ const getAuthor = async (req, res, next) => {
 };
 const getAuthors = async (req, res, next) => {
   try {
-    const result = await listAuthors();
+    const result = await listAuthors(req.query);
 
     res.status(200).json({
       data: result,

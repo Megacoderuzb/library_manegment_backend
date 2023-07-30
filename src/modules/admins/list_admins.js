@@ -17,7 +17,6 @@ const listAdmin = async (query) => {
     .sort(sortObj)
     .skip(offsetNum)
     .limit(limitNum);
-  console.log(matchingDocs);
   const totalDocs = await Admin.countDocuments({ $and: [queryObj, filterObj] });
 
   // res.json({ results: matchingDocs, total: totalDocs });

@@ -1,34 +1,38 @@
 ### REGISTER Admin
 POST http://localhost:7070/admins
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNGFlMmE3NTAyMTYxYzFmZTIwZmFkIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDY1MDY4Nn0.IS9kV6KWUd2jK9ybZje2gpExuKJiBhgp78SEojhW3rk
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNWM1NWUyOTc5ODAwNzBmNWY1MDc4Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDY4NTcwOCwiZXhwIjoxNjkwNzcyMTA4fQ.FOx6CouEiipKXqNBJ54orE-1Kw5hcsmlVdeMexmoWto
 Content-Type: application/json
 
 {
   "full_name": "admin",
-
-  "username": "admin",
-  "password": "1234",
+  "username": "wwww",
+  "password": "1234"
 }
 
 ### LOGIN Admin
+### bu username password super adminniki seed qoshilmagan shu yerdan login qilsangiz token beradi
 POST http://localhost:7070/admins/login
 Content-Type: application/json
 
 {
-  "username": "test",
+  "username": "www",
   "password": "1234"
 }
 
 ### GET all
-GET http://localhost:7070/admins?sort={"full_name": 1}&limit=1&offset=0
+#q - ishlamaydi
+#pagination: filter={"full_name": ""}&sort={"full_name": 1}&limit=10&offset=0
+#qolgan joylarda ham huddi shunday ishlaydi faqat maydon nomlari bowqaca bolishi kerak
+###
+GET http://localhost:7070/admins?sort={"full_name": 1}&limit=10&offset=0
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNTQ4ODE5ZWU2MTRlNzE5MmU3ZjIzIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDY1MTI0OH0.Juzt916wY77a1SY6-NUWnYtgFT24YMbVXc-QRd_zrjk
 ### GET Admin
 GET http://localhost:7070/admins/64c3eeb98e6b7e98dec7d4f6
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjM2VlYjk4ZTZiN2U5OGRlYzdkNGY2Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYwODU2NH0.APy2O6z4Ed-RB1r33erIMBsCRaTx5OdOo9tm7jr_s_k
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNWM1NWUyOTc5ODAwNzBmNWY1MDc4Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDY4NTcwOCwiZXhwIjoxNjkwNzcyMTA4fQ.FOx6CouEiipKXqNBJ54orE-1Kw5hcsmlVdeMexmoWto
 
 ### PATCH Me
 PATCH http://localhost:7070/admins/me
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjM2VlYjk4ZTZiN2U5OGRlYzdkNGY2Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYwODU2NH0.APy2O6z4Ed-RB1r33erIMBsCRaTx5OdOo9tm7jr_s_k
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNWM1NWUyOTc5ODAwNzBmNWY1MDc4Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDY4NTcwOCwiZXhwIjoxNjkwNzcyMTA4fQ.FOx6CouEiipKXqNBJ54orE-1Kw5hcsmlVdeMexmoWto
 Content-Type: application/json
 
 {
@@ -38,7 +42,7 @@ Content-Type: application/json
 # Patch Admin 
 ###
 PATCH http://localhost:7070/admins/64c3eeb98e6b7e98dec7d4f6
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjM2VlYjk4ZTZiN2U5OGRlYzdkNGY2Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYwODU2NH0.APy2O6z4Ed-RB1r33erIMBsCRaTx5OdOo9tm7jr_s_k
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNWM1NWUyOTc5ODAwNzBmNWY1MDc4Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDY4NTcwOCwiZXhwIjoxNjkwNzcyMTA4fQ.FOx6CouEiipKXqNBJ54orE-1Kw5hcsmlVdeMexmoWto
 Content-Type: application/json
 
 {
@@ -47,4 +51,4 @@ Content-Type: application/json
 
 ### DELETE Admin
 DELETE http://localhost:7070/admins/64c3e578a7c259333fa33607
-Authorization:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjM2VhODNiODU3OTJhNGQyMjRjZTliIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDU2MTIzOH0.-69u48UerPLYLzaDQWWXeqYdjG1yx5clU-8osqrXKSI
+Authorization:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNWM1NWUyOTc5ODAwNzBmNWY1MDc4Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDY4NTcwOCwiZXhwIjoxNjkwNzcyMTA4fQ.FOx6CouEiipKXqNBJ54orE-1Kw5hcsmlVdeMexmoWto

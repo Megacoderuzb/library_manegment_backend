@@ -44,7 +44,7 @@ const getLoan = async (req, res, next) => {
 };
 const getLoans = async (req, res, next) => {
   try {
-    const result = await listLoans();
+    const result = await listLoans(req.query);
 
     res.status(200).json({
       data: result,

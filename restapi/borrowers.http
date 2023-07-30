@@ -1,25 +1,25 @@
 ### REGISTER Admin
 POST http://localhost:7070/borrowers/register
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjM2Y3YzBiZGE4ZDEwZGRmMTQxNTcyIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYwMzE4OX0.qu94SacPDrmVqBCQ-g4NWo6YsFgyGx4UH4G43BkYL20
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNWM1NWUyOTc5ODAwNzBmNWY1MDc4Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDY4NTcwOCwiZXhwIjoxNjkwNzcyMTA4fQ.FOx6CouEiipKXqNBJ54orE-1Kw5hcsmlVdeMexmoWto
 Content-Type: application/json
 
 {
-  "full_name": "kitobxon",
-  "address": "kitobiy",
-  "phone": "12345678"
+  "full_name": "betakror aql",
+  "address": "kitobchi",
+  "phone": "1248"
 }
 
 
 ### GET all
-GET http://localhost:7070/borrowers
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjM2Y3YzBiZGE4ZDEwZGRmMTQxNTcyIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYwMzE4OX0.qu94SacPDrmVqBCQ-g4NWo6YsFgyGx4UH4G43BkYL20
+GET http://localhost:7070/borrowers?filter={"full_name": "betakror aql"}&sort={"phone": 1}&limit=6&offset=0
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNWM1NWUyOTc5ODAwNzBmNWY1MDc4Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDY4NTcwOCwiZXhwIjoxNjkwNzcyMTA4fQ.FOx6CouEiipKXqNBJ54orE-1Kw5hcsmlVdeMexmoWto
 ### GET single
-GET http://localhost:7070/borrowers/64c49090198027d875fc4fea
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjM2Y3YzBiZGE4ZDEwZGRmMTQxNTcyIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYwMzE4OX0.qu94SacPDrmVqBCQ-g4NWo6YsFgyGx4UH4G43BkYL20
+GET http://localhost:7070/borrowers/64c5d6e1a58d578c34d2ca2e
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNWM1NWUyOTc5ODAwNzBmNWY1MDc4Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDY4NTcwOCwiZXhwIjoxNjkwNzcyMTA4fQ.FOx6CouEiipKXqNBJ54orE-1Kw5hcsmlVdeMexmoWto
 
 ### PATCH ME
 PATCH http://localhost:7070/borrowers/64c49090198027d875fc4fea
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjM2Y3YzBiZGE4ZDEwZGRmMTQxNTcyIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYwMzE4OX0.qu94SacPDrmVqBCQ-g4NWo6YsFgyGx4UH4G43BkYL20
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNWM1NWUyOTc5ODAwNzBmNWY1MDc4Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDY4NTcwOCwiZXhwIjoxNjkwNzcyMTA4fQ.FOx6CouEiipKXqNBJ54orE-1Kw5hcsmlVdeMexmoWto
 Content-Type: application/json
 
 {
@@ -27,5 +27,5 @@ Content-Type: application/json
 }
 
 ### DELETE ME
-DELETE http://localhost:7070/borrowers/64c49090198027d875fc4fea
-Authorization:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjM2Y3YzBiZGE4ZDEwZGRmMTQxNTcyIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYwMzE4OX0.qu94SacPDrmVqBCQ-g4NWo6YsFgyGx4UH4G43BkYL20
+DELETE http://localhost:7070/borrowers/64c490b3198027d875fc4fee
+Authorization:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNWM1NWUyOTc5ODAwNzBmNWY1MDc4Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDY4NTcwOCwiZXhwIjoxNjkwNzcyMTA4fQ.FOx6CouEiipKXqNBJ54orE-1Kw5hcsmlVdeMexmoWto

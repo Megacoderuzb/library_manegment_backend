@@ -42,7 +42,7 @@ const getPublishers = async (req, res, next) => {
   try {
     // httpValidator({ query: req.query }, getPublishersSchema);
 
-    const result = await listPublishers();
+    const result = await listPublishers(req.query);
 
     res.status(200).json({
       data: result,

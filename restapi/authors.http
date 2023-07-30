@@ -1,30 +1,30 @@
 ### REGISTER Admin
 POST http://localhost:7070/authors
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjM2Y3YzBiZGE4ZDEwZGRmMTQxNTcyIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYwMzE4OX0.qu94SacPDrmVqBCQ-g4NWo6YsFgyGx4UH4G43BkYL20
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNWM1NWUyOTc5ODAwNzBmNWY1MDc4Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDY4NTcwOCwiZXhwIjoxNjkwNzcyMTA4fQ.FOx6CouEiipKXqNBJ54orE-1Kw5hcsmlVdeMexmoWto
 Content-Type: application/json
 
 {
-  "name": "John Doe"
+  "name": "Aql"
 }
 
 
 
 ### GET all
-GET http://localhost:7070/authors
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjM2Y3YzBiZGE4ZDEwZGRmMTQxNTcyIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYwMzE4OX0.qu94SacPDrmVqBCQ-g4NWo6YsFgyGx4UH4G43BkYL20
+GET http://localhost:7070/authors?filter={"name": "Aql"}&sort={"name": -1}&limit=2&offset=1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNWM1NWUyOTc5ODAwNzBmNWY1MDc4Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDY4NTcwOCwiZXhwIjoxNjkwNzcyMTA4fQ.FOx6CouEiipKXqNBJ54orE-1Kw5hcsmlVdeMexmoWto
 ### GET ME
-GET http://localhost:7070/authors/64c54d0afe037090c4fe5183
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjM2Y3YzBiZGE4ZDEwZGRmMTQxNTcyIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYwMzE4OX0.qu94SacPDrmVqBCQ-g4NWo6YsFgyGx4UH4G43BkYL20
+GET http://localhost:7070/authors/64c5ce51e5c616d584990229
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNWM1NWUyOTc5ODAwNzBmNWY1MDc4Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDY4NTcwOCwiZXhwIjoxNjkwNzcyMTA4fQ.FOx6CouEiipKXqNBJ54orE-1Kw5hcsmlVdeMexmoWto
 
 ### PATCH ME
-PATCH http://localhost:7070/authors/64c54d0afe037090c4fe5183
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjM2Y3YzBiZGE4ZDEwZGRmMTQxNTcyIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYwMzE4OX0.qu94SacPDrmVqBCQ-g4NWo6YsFgyGx4UH4G43BkYL20
+PATCH http://localhost:7070/authors/64c5c11ead1ef57c29bbdf55
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNWM1NWUyOTc5ODAwNzBmNWY1MDc4Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDY4NTcwOCwiZXhwIjoxNjkwNzcyMTA4fQ.FOx6CouEiipKXqNBJ54orE-1Kw5hcsmlVdeMexmoWto
 Content-Type: application/json
 
 {
-  "name": "Eshmat"
+  "name": "Jane Boe"
 }
 
 ### DELETE ME
-DELETE http://localhost:7070/authors/64c54d0afe037090c4fe5183
-Authorization:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjM2Y3YzBiZGE4ZDEwZGRmMTQxNTcyIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYwMzE4OX0.qu94SacPDrmVqBCQ-g4NWo6YsFgyGx4UH4G43BkYL20
+DELETE http://localhost:7070/authors/64c5c11ead1ef57c29bbdf55
+Authorization:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNWM1NWUyOTc5ODAwNzBmNWY1MDc4Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDY4NTcwOCwiZXhwIjoxNjkwNzcyMTA4fQ.FOx6CouEiipKXqNBJ54orE-1Kw5hcsmlVdeMexmoWto

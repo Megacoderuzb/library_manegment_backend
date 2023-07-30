@@ -59,7 +59,7 @@ const getBook = async (req, res, next) => {
 };
 const getBooks = async (req, res, next) => {
   try {
-    const result = await listBooks();
+    const result = await listBooks(req.query);
     res.status(200).json({
       data: result,
     });
