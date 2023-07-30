@@ -5,7 +5,7 @@ Content-Type: application/json
 
 {
   "full_name": "admin",
-  "username": "wwww",
+  "username": "www",
   "password": "1234"
 }
 
